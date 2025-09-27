@@ -21,13 +21,13 @@ set timestamp=%year%%month%%day%_%time:~0,2%%time:~3,2%%time:~6,2%
 set timestamp=%timestamp: =0%
 
 :: Check if the folder already exists
-if exist "%~dp0..\..\..\..\..\common\dota 2 beta\game\dota\scripts\vscripts\bots" (
+if exist "%~dp0..\..\..\..\..\..\..\games\Dota\dota 2 beta\game\dota\scripts\vscripts\bots" (
     echo Folder already exists, renaming to bots_old_%timestamp%...
-    ren "%~dp0..\..\..\..\..\common\dota 2 beta\game\dota\scripts\vscripts\bots" "bots_old_%timestamp%"
+    ren "%~dp0..\..\..\..\..\c..\..\games\Dota\dota 2 beta\game\dota\scripts\vscripts\bots" "bots_old_%timestamp%"
 )
 
 echo Creating symbolic link...
-mklink /d "%~dp0..\..\..\..\..\common\dota 2 beta\game\dota\scripts\vscripts\bots" "%~dp0.."
+mklink /d "%~dp0..\..\..\..\..\..\..\games\Dota\dota 2 beta\game\dota\scripts\vscripts\bots" "%~dp0.."
 if %errorlevel% equ 0 (
     echo ============
     echo ============
